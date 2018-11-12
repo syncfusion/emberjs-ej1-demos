@@ -1,0 +1,57 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+               {{#ej-rotator id="sliderContent" e-slideWidth=model.slideWidth e-frameSpace=model.frameSpace
+                   e-slideHeight=model.slideHeight e-displayItemsCount=model.displayItemsCount e-navigateSteps=model.navigateSteps
+                   e-pagerPosition=model.pagerPosition  e-orientation=model.orientation e-showPager=model.showPager e-enabled=model.enabled e-showCaption=model.showCaption
+        e-allowKeyboardNavigation=model.allowKeyboardNavigation  e-showPlayButton=model.showPlayButton e-isResponsive=model.isResponsive e-animationType= model.animationType e-showThumbnail=model.showThumbnail e-thumbnailSourceID=model.thumbnailSourceID e-enableAutoPlay=model.enableAutoPlay}}
+               
+                <li>
+                    <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/nature.jpg" alt="Nature" title="Nature" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/bird.jpg" alt="bird" title="Beautiful Bird" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/sculpture.jpg" alt="sculpture" title="Amazing Sculptures" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/seaview.jpg" alt="seaview" title="Sea-View" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/snowfall.jpg" alt="snowfall" title="Snow Fall" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/card.jpg" alt="card" title="Credit Card" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/night.jpg" alt="night" title="Colorful Night" /></li>              
+                {{/ej-rotator}}       
+                 <ul id="thumbElement" style="display: none">
+                      <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/bird.jpg" alt="bird" title="Beautiful Bird" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/sculpture.jpg" alt="sculpture" title="Amazing Sculptures" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/seaview.jpg" alt="seaview" title="Sea-View" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/snowfall.jpg" alt="snowfall" title="Snow Fall" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/card.jpg" alt="card" title="Credit Card" /></li>
+                        <li>
+                            <img class="image" src="//js.syncfusion.com/demos/web/content/images/rotator/night.jpg" alt="night" title="Colorful Night" /></li>              
+                </ul>                  
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+   .frame{
+        width: 500px;
+        height: 100%;
+        }
+        #sliderContent > li .image {
+            width: 100%;
+            height: 300px;
+        }
+        .e-rotator-wrap .e-in-wrap .e-nav-btn.e-icon, .e-rotator-wrap .e-thumb-nav .e-thumb-btn.e-icon {
+    background-image: url("//js.syncfusion.com/demos/web/content/ejthemes/bootstrap-theme/images/rotator-icon.png");
+    }
+        
+    </style>
+{{outlet}}
