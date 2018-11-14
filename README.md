@@ -24,16 +24,18 @@ Install the following items:
 
 Syncfusion has no liability for any damage or consequence that may arise by the use or viewing of the samples. The samples are for demonstrative purposes and if you choose to use or access the samples you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, accessing or otherwise viewing the samples. By accessing, viewing, or otherwise seeing the samples you acknowledge and agree Syncfusion’s samples will not allow you to seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize or otherwise do anything with Syncfusion’s samples.
 
-## Using the samples
+## <a name="using-the-samples"></a>Using the examples ##
 
-If you download the samples using the **Download ZIP** option: 
+The easiest way to use these samples without using Git is to download the zip file containing the current version (using the following link or by clicking the "Download ZIP" button on the repo page). You can then unzip the entire archive and use the samples.
 
-* Before you unzip the archive, right-click it, select **Properties**, and then select **Unblock**.
-* Be sure to unzip the entire archive.
+   [Download the samples ZIP](../../archive/master.zip)
 
-If you clone the application, run **git clone <repository-url>** to clone the repository.
+   **Notes:** 
+   * Before you unzip the archive, right-click it, select **Properties**, and then select **Unblock**.
+   * Be sure to unzip the entire archive, and not just individual samples. The samples all depend on the SharedContent folder in the archive.  
 
-To use the Syncfusion Essential JS 1 samples, Syncfusion license key should be registered in samples. Refer [this](https://www.syncfusion.com/kb/9002/how-to-apply-the-license-key-for-syncfusion-samples-published-in-github) link for more information.
+
+**Reminder:** If you unzip individual samples, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the samples.
 
 ## How to Run the samples
 
