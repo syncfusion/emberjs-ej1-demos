@@ -1,0 +1,36 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area" align="center">
+            {{ej-digitalgauge id="CoreExportImage" e-height=model.height e-isResponsive=model.isResponsive e-width=model.width e-items=model.items}}
+        </div>
+    </div>
+</div>
+<div class="panel-body">
+    <div id="property-window" class="box wide">
+        <div class="row">
+            <div class="col-md-3">File Name</div>
+            <div class="col-md-3">
+                <input type="text" id="fileName" style="width:110px" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">File Type</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="fileFormat" e-width="110px" e-targetID="fileType" e-selectedIndex=0 e-change=model.fileFormatChange
+                }}
+                <div id="fileType">
+                    <ul>
+                        <li>JPEG</li>
+                        <li>PNG</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-md-3">
+                {{ej-button id="btnSubmit" e-text="Export" e-size="medium" e-click=model.buttonClick}}
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}
