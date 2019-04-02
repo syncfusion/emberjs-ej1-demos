@@ -1,0 +1,63 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-pivotgrid">
+                {{ej-pivotgrid id="PivotGrid" e-dataSource=model.dataSource e-enableGroupingBar=model.enableGroupingBar e-frozenHeaderSettings=model.frozenHeaderSettings  e-frozenHeaderSettings=model.frozenHeaderSettings}}
+				{{ej-pivotschemadesigner id="PivotSchemaDesigner"}}
+            </div>
+			<div class="panel-body">
+			    <div id="property-window" class="box wide">
+                    <div class="prop-grid content">
+                        <div class="row">
+                            <div>
+                                Data Source
+                            </div>
+                            <br />
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td style="float:left; padding-right:15px">
+											{{ ej-radiobutton id="rdbOlap" e-name="datasource" e-text="OLAP" e-change=model.renderGrid }}
+                                        </td>
+                                        <td>
+											{{ ej-radiobutton id="rdbRelational" e-name="datasource" e-checked=model.checked e-text="Relational" e-change=model.renderGrid }}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div>
+                                Frozen Header Settings
+                            </div>
+                            <br />
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td style="float:left; padding-right:15px">
+											{{ ej-checkbox id="chkFrozenCol" e-text="Freeze Column Header" e-checked=model.checked e-change=model.renderGrid }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style ="float:left; padding-right:15px">
+											{{ ej-checkbox id="chkFrozenRow" e-text="Freeze Row Header" e-checked=model.checked e-change=model.renderGrid }}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+			    </div>
+		    </div>
+        </div>
+    </div>
+</div>
+<style>
+		#PivotGrid {
+            width: 100% !important;
+			height: 350px;
+			overflow: auto;
+        }
+
+ </style>
+{{outlet}}
