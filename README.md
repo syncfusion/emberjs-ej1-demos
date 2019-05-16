@@ -18,7 +18,7 @@ Install the following items:
 * Node.js [version 5.x.x+](https://nodejs.org/en/)
 * npm  [version 3.x.x+](https://blog.npmjs.org/post/85484771375/how-to-install-npm)
 * Ember CLI  [version 2.x.x+](https://ember-cli.com/)
-* Any text editor
+* Any text editor 
 
 ## License
 
