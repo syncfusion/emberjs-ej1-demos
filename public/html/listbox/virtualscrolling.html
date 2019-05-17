@@ -1,0 +1,33 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-listbox">
+			 <div class="ctrllabel">Select a Customer</div>
+             {{ej-listbox id="selectcustomer" e-dataSource=model.dataSource e-fields=model.fields e-itemRequestCount=model.itemRequestCount e-query=model.query 
+               e-allowVirtualScrolling=model.allowVirtualScrolling e-height=model.height e-width=model.width}}
+            </div>
+        </div>
+    </div>
+</div>
+ <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                         <div class="col-md-6">Select mode</div>
+                        <div class="col-md-6">                
+                            {{#ej-dropdownlist id="List" e-targetID="dropdown" e-width=model.dropWidth e-change=model.onValueChange e-selectedItemIndex=model.selectedItemIndex  }}
+                                    <ul id="dropdown">
+                                    <li value="disablevirtual">Normal Mode</li>
+                                    <li value="enablevirtual">Continuous Mode</li>
+                                    </ul>                                                        
+                            {{/ej-dropdownlist}}
+            </div>
+          </div>
+      </div>
+   </div>
+<style>
+.ctrllabel {
+            font-weight: 600;
+            padding-bottom: 12px;
+        }
+		</style>
+{{outlet}}

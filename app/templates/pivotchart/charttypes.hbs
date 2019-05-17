@@ -1,0 +1,43 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-pivotchart">
+                {{ej-pivotchart id="PivotChart" e-dataSource=model.dataSource e-isResponsive=model.isResponsive e-zooming=model.zooming e-type=model.type e-commonSeriesOptions=model.commonSeriesOptions e-size=model.size e-primaryXAxis=model.primaryXAxis e-primaryYAxis=model.primaryYAxis e-legend=model.legend }}
+            </div>
+			<div class="panel-body">
+			    <div id="property-window" class="box wide">
+				    <div class="row">
+					    <div class="col-md-3">
+							Series Type
+						</div>
+						<div class="col-md-3">
+							{{ej-dropdownlist id="dropdownlist" e-value=model.value e-change=model.onTypeChange e-dataSource=model.list}}
+						</div>
+				    </div>
+			    </div>
+		    </div>
+        </div>
+    </div>
+</div>
+<style>
+	#PivotChart{
+		height: 600px;
+		width:100%;
+	}
+    .row {
+            display: inline-block;
+			width:100%;
+	}
+	#property-window{
+		height:150px;
+		width:57%;
+	}
+    .control
+    {
+        padding-left: 10px;
+    }
+    .e-ddl.e-widget.e-dropdownlist.e-js {
+        width: 112px!important;
+    }
+</style>
+{{outlet}}

@@ -1,0 +1,36 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-tile">
+                <div id="scrollTarget" style="height: 100%">
+                    <div class="e-tile-group">
+                        <div class="e-tile-column">
+                {{ej-tile id="tile1" e-imageUrl="//js.syncfusion.com/demos/web/content/images/tile/windows/games.png" e-imagePosition="center" e-tileSize="medium" e-text="Play" }} 
+                <div class="e-tile-small-col-2">
+                    {{ej-tile id="tile2" e-imageUrl="//js.syncfusion.com/demos/web/content/images/tile/windows/alerts.png" e-tileSize="small"}} 
+                    {{ej-tile id="tile3" e-tileSize="small" e-liveTile=model.liveTile3}} 
+                    {{ej-tile id="tile4" e-tileSize="small" e-liveTile=model.liveTile4}} 
+                    {{ej-tile id="tile5" e-imageUrl='//js.syncfusion.com/demos/web/content/images/tile/windows/messages.png' e-badge=model.badge}} 
+                </div>
+                   {{ej-tile id="tile6"  e-tileSize="medium" e-text="People" e-imagePosition="fill" e-liveTile=model.liveTile6  }} 
+                    {{ej-tile id="tile7"  e-tileSize="medium" e-text="Photo" e-imagePosition="center" e-liveTile=model.liveTile7 }} 
+                    {{ej-tile id="tile8"  e-tileSize="wide" e-imagePosition="center" e-text="Weather" e-liveTile=model.liveTile8 }} 
+               </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+<style>
+	.cols-sample-area{
+		text-align: center;
+	}
+	#scrollTarget{
+		display: inline-block;
+	}
+	#scrollTarget .e-tile-group{
+		padding: 0;
+	}
+	</style>
+{{outlet}}
