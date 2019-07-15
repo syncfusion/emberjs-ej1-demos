@@ -1,0 +1,60 @@
+<div class="content-container-fluid">
+	 <div class="row">
+            <div class="cols-sample-area">
+                <div>
+                    {{ej-ribbon id="resizeribbon" e-width="60%" e-expandPinSettings=model.expandPinSettings e-collapsePinSettings=model.collapsePinSettings e-allowResizing=model.allowResizing e-applicationTab=model.applicationTab e-tabs=model.tabs e-create=model.onCreate}}
+                </div>
+                <ul id="ribbonmenu">
+				<li><a>FILE</a>
+                    <ul>
+                    <li><a>New</a></li>
+                    <li><a>Open</a></li>
+                    <li><a>Save</a></li>
+                    <li><a>Save As</a></li>
+                    <li><a>Print</a></li>
+			    	</ul>
+				</li>
+                </ul>
+				<ul id="pasteSplit">
+               <li><a>Paste</a></li>
+            </ul>
+            <input id="fontcolor"/>
+            <input id="fillcolor"/>
+              </div>
+        </div>
+</div>
+ <style>
+	.row .cols-sample-area {
+        min-height: 450px !important;
+    }
+        .e-contenteditor {
+            width: 100%;
+            height: 220px;
+            border: 1px solid #D9DFDE;
+			border-top:0;
+            overflow: auto;
+        }
+
+            .e-contenteditor p {
+                margin: 20px;
+            }
+			.e-ribbon.e-responsive .e-resizebtn .e-icon.e-Clipboard::before{
+			 right: 7px;
+			}
+			.e-ribbon.e-responsive .e-resizebtn .e-icon.e-Font::before{
+			 left: 7px;
+			}
+			.e-ribbon.e-responsive .e-resizebtn .e-icon.e-Alignment::before{
+			  right: 10px;
+			}
+			.e-ribbon.e-responsive .e-responsivecontent .e-fontcoloricon{
+			margin-top:10px;
+			}
+			.e-ribbon.e-responsive .e-responsivecontent .e-selected-color{
+			margin-top:10px;
+			}
+			.e-ribbon.e-responsive .e-responsivecontent .e-fillcoloricon{
+			margin-top:10px;
+			}
+    </style>
+{{outlet}}

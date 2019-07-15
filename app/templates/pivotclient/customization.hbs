@@ -1,0 +1,87 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-pivotclient">
+                {{ej-pivotclient id="PivotClient" e-size=model.size e-dataSource=model.dataSource e-title=model.title e-beforeExport=model.beforeExport e-renderSuccess=model.renderSuccess e-loadReport=model.loadReport e-fetchReport=model.fetchReport e-saveReport=model.saveReport}}
+            </div>
+			<div id="property-window" class="box wide">
+                <div class="row">
+                    <div class="col-md-3">
+                        Control Placement:
+                    </div>
+                    <div class="col-md-3">
+						{{ej-dropdownlist id="ctrlPlace" e-value=model.controlValue e-dataSource=model.controlPalcements e-fields=model.fields}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Display Mode:
+                    </div>
+                    <div class="col-md-3">
+						{{ej-dropdownlist id="dispMode" e-value=model.displayValue e-dataSource=model.displayModes e-fields=model.fields}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Default View:
+                    </div>
+                    <div class="col-md-3">
+                        <table>
+                            <tr>
+                                <td class="chkrad">
+									{{ ej-radiobutton id="Radio1" e-name="dftView" e-text="Chart" }}
+                                </td>
+                                <td class="chkrad" colspan="2">
+									{{ ej-radiobutton id="Radio2" e-name="dftView" e-text="Grid" e-checked=model.checked }}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Toggle Panel:
+                    </div>
+                    <div class="col-md-3">
+                        <table>
+                            <tr>
+                                <td class="chkrad">
+									{{ ej-radiobutton id="Radio3" e-name="tglPln" e-text="True" }}
+                                </td>
+                                <td class="chkrad" colspan="2">
+									{{ ej-radiobutton id="Radio4" e-name="tglPln" e-text="False" e-checked=model.checked }}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Responsive:
+                    </div>
+                    <div class="col-md-3">
+                        <table>
+                            <tr>
+                                <td class="chkrad">
+									{{ ej-radiobutton id="Radio5" e-name="tglPln" e-text="True" }}
+                                </td>
+                                <td class="chkrad" colspan="2">
+									{{ ej-radiobutton id="Radio6" e-name="tglPln" e-text="False" e-checked=model.checked }}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+					{{ ej-button id="Btn1" e-size=model.btnsize e-text=model.btntext e-showRoundedCorner=model.roundedCorner e-click=model.ApplyChanges }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.row{
+	margin:10px !important;
+}
+</style>
+{{outlet}}

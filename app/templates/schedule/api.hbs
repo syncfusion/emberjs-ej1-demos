@@ -1,0 +1,75 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-schedule">
+                {{ej-schedule id="schedule" e-width="100%" e-height="525px" e-currentDate=model.currentDate e-appointmentSettings=model.appointmentSettings
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-body">
+    <div id="property-window" class="box wide">
+        <div class="row">
+            <div class="col-md-3">Read Only</div>
+            <div class="col-md-3">
+                {{ej-checkbox id="readonly" e-checked=false e-change=model.onReadOnly}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Hide Weekend</div>
+            <div class="col-md-3">
+                {{ej-checkbox id="hideweekend" e-checked=false e-change=model.hideweekdays}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">FirstDayOfWeek</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="firstdayofweek" e-width="110px" e-dataSource=model.dayNames e-selectedIndex=0 e-change=model.onActiveChange
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">WorkWeek</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="workweeks" e-width="110px" e-dataSource=model.dayNames e-change=model.changeWeekDays e-checked=true
+                e-showCheckbox=true e-selectedItems=model.daySelect }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Start Hour</div>
+            <div class="col-md-3">
+                {{ej-numerictextbox id="starthour" e-width="110px" e-name="numeric" e-value=0 e-minValue=0 e-maxValue=24 e-enableStrictMode=true
+                e-change=model.changeHours }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">End Hour</div>
+            <div class="col-md-3">
+                {{ej-numerictextbox id="endhour" e-width="110px" e-name="numeric" e-value=24 e-minValue=0 e-maxValue=24 e-enableStrictMode=true
+                e-change=model.changeHours }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Cell Width</div>
+            <div class="col-md-3">
+                {{ej-numerictextbox id="cellwidth" e-width="110px" e-name="numeric" e-value=100 e-minValue=0 e-showSpinButton=false e-decimalPlaces=0
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Cell Height</div>
+            <div class="col-md-3">
+                {{ej-numerictextbox id="cellheight" e-width="110px" e-name="numeric" e-value=60 e-minValue=0 e-showSpinButton=false e-decimalPlaces=0
+                }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                {{ej-button id="btnSubmit" e-text="Submit" e-size="medium" e-click=model.changeDimension}}
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}
