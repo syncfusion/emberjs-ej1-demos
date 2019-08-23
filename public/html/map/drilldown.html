@@ -1,0 +1,52 @@
+  <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div id="title" style="background-color: #FAFAF9;border-color: lightgray;margin-left:0px;border-width: 2px;opacity: 0.7;height: 60px;width:150px">
+                    <label style="color:Black;font-size:22px;margin:15px;margin-top:7px;margin-left:20px;margin-right:20px;height:25px;font-weight:Normal;">Sales Data</label>
+                </div>
+                <div id="button" class="backLabel" onclick="ClickFunction()" style="display:none;left:50px;top:50px;width:85px;height:28px;border-radius: 16px;background-color:#0F77B7;">
+                    <img id="backtext" style="margin-left:15px;margin-top:6px;" src="content/images/map/backtext.png" />
+                </div>
+                <div style="min-height:465px">
+                    {{ej-map id="Map" e-enableAnimation=model.enableAnimation e-shapeSelected=model.shapeSelected
+                    e-layers=model.layers e-zoomSettings=model.zoomSettings
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+       <script id="labeltemplate" type="x-handlebars">
+        <div style="margin-top:-10px;margin-left:-1px;">
+            <table style="width:40px;">
+                <tr>
+                    <td>
+                        <label style="color:Black;font-size:14px;width:40px;text-wrap:normal;font-weight:normal;text-align:center;" id="Label4">\{{:country}}</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </script>
+    <style type="text/css">
+        .backLabel:hover {
+            cursor: pointer;
+        }
+
+        .e-map {
+            background-color: white;
+        }
+    </style>  
+     <script>
+         function ClickFunction(args) {
+                var button = document.getElementById("button");
+                $(button).css('background-color', '#028DC4');
+                var mapObj = Ember.$("#Map").data("ejMap");
+                mapObj.model.enableAnimation = false;
+                mapObj.option("baseMapIndex", 0);
+                $(button).fadeOut(500);
+                var title = document.getElementById("title");
+                $(title).css("display", "block");
+            }
+     </script>
+
+ {{outlet}}
+
