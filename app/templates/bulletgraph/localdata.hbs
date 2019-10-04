@@ -1,0 +1,21 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area" align="center">
+                {{ej-bulletgraph id="Bulletgraph"
+                e-height= model.height
+                e-enableAnimation = model.enableAnimation
+                e-qualitativeRangeSize=model.qualitativeRangeSize
+                e-quantitativeScaleLength=model.quantitativeScaleLength
+                e-tooltipSettings=model.tooltipSettings
+                e-orientation=model.orientation
+                e-flowDirection=model.flowDirection
+                e-quantitativeScaleSettings=model.quantitativeScaleSettings
+                e-fields = model.fields
+                e-qualitativeRanges=model.qualitativeRanges
+                e-captionSettings=model.captionSettings
+}}
+         </div>
+    </div>
+</div>
+
+{{outlet}}

@@ -1,0 +1,38 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+                <div align="center">
+                     <table width="500px" align="center"> 
+                         <tr>
+                             <td> Normal </td>
+                             <td>{{ ej-button id="Button1" e-size=model.Normal e-contentType="imageonly" e-showRoundedCorner=model.roundedCorner e-prefixIcon="e-icon e-handup"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Mini </td>
+                             <td>{{ ej-button id="Button2" e-size=model.Mini e-showRoundedCorner=model.roundedCorner e-text="login"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Small </td>
+                             <td>{{ ej-button id="Button3" e-size=model.Small e-showRoundedCorner=model.roundedCorner e-text="login"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Medium </td>
+                             <td>{{ ej-button id="Button4" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-text="login"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Large </td>
+                             <td>{{ ej-button id="Button5" e-contentType="textandimage" e-size=model.Large e-showRoundedCorner=model.roundedCorner e-text="login" e-prefixIcon="e-icon e-handup"}}</td>
+                         </tr>
+                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    td{
+        padding: 5px;
+    }
+</style>
+{{outlet}}
