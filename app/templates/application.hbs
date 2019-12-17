@@ -1,0 +1,87 @@
+<div class="samplebrowser">
+    <div class="headerarea">
+        <nav class="navbar">
+            <div class="content-container-fluid">
+                <div class="navbar-header leftheader">
+                    <a class="sblogo" href="#"></a>
+                    <div class="sbtext"></div>
+                    <div class="sbbeta"></div>
+                </div>
+				<div class="themegallery">
+					<div class="e-sbtheme">
+						{{ej-menu id="themebutton" e-fields=model.themeFields e-isResponsive=model.isResponsive e-width=model.themeWidth e-cssClass=model.themeCssClass e-click=model.themeClick e-openOnClick=model.themeOpenOnClick}}
+					</div>
+				</div>
+            </div>
+        </nav>
+    </div>
+    <div class="contentarea">
+        <div class="accordion-panel" style="z-index: 1000000; position: fixed;">
+            <div class="searchoption">
+                {{ej-autocomplete id="searchauto" e-showPopupButton=true e-fields=model.fields e-popupWidth="350px" e-dataSource=model.subData
+                e-select= model.onSelectItem e-watermarkText="Search a Sample" e-width="100%" e-open="onPopupOpen" e-filterType="Contains" e-template="<div class='control_name'>${control}</div> <div class='control_samplename'>${name}</div>" }}
+            </div>
+            {{#ej-scroller id="scrollcontainer" class="scrollcontainer" e-buttonsize="0" e-scrollersize="9"}}
+            <div>
+                <ul class="productList" id="productList">
+                    {{#each model.controls as |control|}}
+                    <li class="controlnamelist">
+                        <a onclick={{action "hideSampleList"}}>{{control.name}} <span class="sb-arrow up"></span></a>
+                        <ul class="samplelist">
+                            {{#each control.samples as |sample|}}
+                            <li class="samplenamelist">
+                                {{#link-to sample.id}}{{sample.name}}{{/link-to}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/ej-scroller}}
+        </div>
+        <div class="control-panel" onclick={{action "navBarHide"}} onscroll={{action "scrollPanel"}}>
+            <div class="row">
+                <div class="contentheader">
+                    {{ej-button id="slidemenu" class="slidemenuicon" e-showRoundedCorner=true e-size="normal" e-prefixIcon="e-icon e-slidemenu"
+                    e-contentType="imageonly"}}
+                    <div class="controlnamediv">
+                        <span id="controlname_id" class="controlname">{{model.controlName}} <span>/</span></span>
+                        <span id="sample_id" class="samplename">{{model.sampleName}}</span>
+                    </div>
+                </div>
+                <div class="productpage">
+                    <div class="contentchild">
+                        <div class="router">
+                            {{outlet}}
+                        </div>
+                    </div>
+                    <div class="contentsourcediv">
+                        {{#ej-tab id="tab" e-selectedItemIndex="1" }}
+                        <ul>
+                            <li><a href="#htmlsource">HBS</a></li>
+                            <li><a href="#jssource">JS</a></li>
+                        </ul>
+                        <div id="htmlsource">
+                            <div class="tab_content"></div>
+                        </div>
+                        <div id="jssource">
+                            <div class="tab_content"></div>
+                        </div>
+                        {{/ej-tab}}
+                    </div>
+                </div>
+                <div class="footerdiv">
+                    <div class="copyright">Copyright © 2001-2018 Syncfusion Inc.</div>
+                    <div style="float: right;">
+                        <a href="//www.syncfusion.com">
+                            <div class="syncfusion"></div>
+                        </a>
+                    </div>
+                </div>
+                {{ej-button id="scrollTop" class="e-icon" e-contentType= "imageOnly" e-title="Back to the Top" e-prefixIcon= "e-icon chevron-up_01"
+                e-click=model.scrollTop}}
+            </div>
+        </div>
+    </div>
+</div>
