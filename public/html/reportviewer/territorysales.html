@@ -1,0 +1,19 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-reportviewer">
+                {{ej-reportviewer id="territorysales_reportViewer_Control" e-reportServiceUrl = model.reportServiceUrl 
+				e-reportServerUrl = model.reportServerUrl
+                e-processingMode = model.processingMode 
+                e-reportPath = model.reportPath }}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+	#territorysales_reportViewer_Control{
+		height: 550px;
+		display: block;
+	}
+</style>
+{{outlet}}

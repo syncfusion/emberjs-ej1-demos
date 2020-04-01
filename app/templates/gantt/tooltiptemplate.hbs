@@ -1,0 +1,62 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+                {{ej-gantt id="GanttTooltipTemplate" 
+                e-dataSource=model.dataSource
+                e-resources=model.resources
+                e-childMapping="subtasks"
+                e-treeColumnIndex= 1
+                e-isResponsive=true
+                e-taskIdMapping="taskID"
+                e-taskNameMapping="taskName"
+                e-scheduleStartDate=model.scheduleStartDate
+                e-scheduleEndDate=model.scheduleEndDate           
+                e-startDateMapping="startDate"
+                e-endDateMapping="endDate"
+                e-progressMapping="progress"
+                e-durationMapping="duration"
+                e-resourceInfoMapping="resourceId"
+                e-resourceNameMapping="resourceName"
+                e-resourceIdMapping="resourceId"  
+                e-predecessorMapping="predecessor"
+                e-showResourceNames=true
+                e-showGridCellTooltip=true                
+                e-includeWeekend=false
+                e-highlightWeekEnds=true      
+                e-taskbarTooltipTemplateId="tooltipTemplate"                          
+                e-allowGanttChartEditing=false
+
+                }}
+        </div>
+    </div>
+</div>
+<script type="text/x-jsrender" id="tooltipTemplate">
+        <table>            
+            \{{if #data['resourceNames']}}
+            <tr>
+                <td rowspan="3" style="padding:3px"><img src="content/images/gantt/\{{:#data['resourceNames']}}.png" height="40px" /></td>
+                <td style="padding:3px"><b>Task done By:</b></td>
+                <td style="padding:3px">\{{:#data['resourceNames']}}</td>
+            </tr>
+            \{{/if}}
+            <tr>
+                <td style="padding:3px"><b>Starts On:</b></td>
+                <td style="padding:3px">\{{:~_ganttDateFormatter("startDate")}}</td>
+            </tr>
+            <tr>
+                <td style="padding:3px"><b>Ends On:</b></td>
+                <td style="padding:3px">\{{:~_ganttDateFormatter("endDate")}}</td>
+            </tr>
+        </table>
+
+    </script>
+    <script>
+        function _dateFormating(key) {    
+            var date = this.data[key];
+            return date ? ej.format(date, "dddd, dd MMM") : "";
+        }
+        var helpers = {};
+        helpers["_ganttDateFormatter"] = _dateFormating;
+        $.views.helpers(helpers);
+    </script>
+{{outlet}}

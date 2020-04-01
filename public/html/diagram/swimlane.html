@@ -1,0 +1,45 @@
+<div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div class="control_section">
+                    <div class="symPalette_section">
+                        {{ej-symbolpalette id="symbolPalette" e-diagramId = "Diagram" e-palettes = model.palettes e-paletteItemWidth = 50 e-paletteItemHeight = 50 e-height = "100%" e-width = "100%" }}
+                    </div>
+                    <div class="middle_section"></div>
+                    <div class="diagram_section">
+                        {{ej-diagram id="Diagram" e-width = "100%"  e-height = "100%" e-nodes = model.node e-connectors = model.connectors e-defaultSettings = model.defaultSettings}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <style>
+        .cols-sample-area {
+            width: 600px;
+        }
+
+        .control_section {
+            height: 600px;
+            width: 100%;
+            background-color: transparent;
+        }
+
+        .diagram_section {
+            width: calc(100% - 255px);
+            height: 100%;
+            float: left;
+        }
+
+        .middle_section {
+            float: left;
+            width: 5px;
+            height: 100%;
+        }
+
+        .symPalette_section {
+            width: 250px;
+            height: 100%;
+            float: left;
+        }
+    </style>
+{{outlet}}

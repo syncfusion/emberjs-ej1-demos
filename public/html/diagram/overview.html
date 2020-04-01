@@ -1,0 +1,40 @@
+<div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div class="control_section">
+                    <div class="diagram_section">
+                        {{ej-diagram id="Diagram" e-width = "100%" e-height = "600px"  e-tool = model.tool  e-nodes = model.nodes e-connectors = model.connectors e-defaultSettings = model.defaultSettings e-create = model.create}}
+                    </div>
+                    <div class="col-md-3">
+                            Overview
+                    </div>
+                    <div class="sample_properties">
+                        {{ej-overview e-sourceID = "Diagram" e-width = "100%"  e-height = "560px" }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <style>
+        .cols-sample-area {
+            width: 600px;
+        }
+
+        .control_section {
+            height: 600px;
+            width: 100%;
+            background-color: transparent;
+        }
+
+        .diagram_section {
+            width: calc(100% - 260px);
+            height: 100%;
+            float: left;
+        }
+        .sample_properties {
+            width: 250px;
+            height: 100%;
+            float: left;
+        }
+    </style>
+{{outlet}}
