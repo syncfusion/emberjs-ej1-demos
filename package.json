@@ -22,7 +22,7 @@
     "ember-cli-htmlbars": "^2.0.1",
     "gulp": "*",
     "gulp-rename": "*",
-    "jquery": "~3.2.1",
+    "jquery": "~3.5.0",
     "syncfusion-ember": "git://github.com/syncfusion/syncfusion-ember.git",
     "syncfusion-javascript": "*"
   },
