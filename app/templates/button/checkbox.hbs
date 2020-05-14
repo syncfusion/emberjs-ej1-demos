@@ -1,0 +1,36 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+                <div align="center">
+                     <table width="500px" align="center"> 
+                         <tr>Hobbies</tr><br>
+                         <tr>
+                             <td>{{ ej-checkbox id="Check1" e-size=model.Small e-showRoundedCorner=model.roundedCorner e-text="Music" e-checked=model.checked}}</td>
+                             <td>{{ ej-checkbox id="Check2" e-size=model.Small e-showRoundedCorner=model.roundedCorner e-text="Sports"}}</td>
+                             <td>{{ ej-checkbox id="Check3" e-size=model.Small e-showRoundedCorner=model.roundedCorner e-text="Bike Riding"}}</td>
+                         </tr><br>
+                         <tr>Favourite Search Engines</tr><br>
+                         <tr>
+                             <td>{{ ej-checkbox id="Check4" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-text="Google" e-checked=model.checked}}</td>
+                             <td>{{ ej-checkbox id="Check5" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-text="Yahoo"}}</td>
+                             <td>{{ ej-checkbox id="Check6" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-text="Bing"}}</td>
+                         </tr><br>
+                          <tr>Favourite Social Networks</tr><br>
+                         <tr>
+                             <td>{{ ej-checkbox id="Check7" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-text="Facebook" e-enableTriState=model.triState e-checkState=model.checkState}}</td>
+                             <td>{{ ej-checkbox id="Check8" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-text="GPlus" e-enableTriState=model.triState}}</td>
+                             <td>{{ ej-checkbox id="Check9" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-text="Twitter" e-enableTriState=model.triState}}</td>
+                         </tr><br>
+                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    td{
+        width: 100px;
+    }
+</style>
+{{outlet}}
