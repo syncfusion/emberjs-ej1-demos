@@ -1,0 +1,19 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-reportviewer">
+                {{ej-reportviewer id = "areachart_reportViewer_Control" e-reportServiceUrl = model.reportServiceUrl 
+                e-processingMode = model.processingMode 
+                e-reportPath = model.reportPath
+				e-dataSources = model.dataSources }}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+	#areachart_reportViewer_Control{
+		height: 550px;
+		display: block;
+	}
+</style>
+{{outlet}}
