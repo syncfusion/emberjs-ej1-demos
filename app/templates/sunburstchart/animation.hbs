@@ -1,0 +1,43 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            {{ej-sunburstchart id="SunburstChart" 
+            e-dataSource=model.dataSource 
+            e-valueMemberPath = model.valueMemberPath 
+            e-levels = model.levels 
+            e-dataLabelSettings=model.dataLabelSettings 
+            e-tooltip=model.tooltip 
+            e-innerRadius=model.innerRadius
+            e-size=model.size e-title = model.title
+            e-enableAnimation=model.enableAnimation 
+            e-legend=model.legend }}
+        </div>
+    </div>
+</div>
+
+<div class="panel-body">
+    <div id="property-window" class="box wide">
+        <div class="row">
+            <div class="col-md-3">Enable Animation</div>
+            <div class="col-md-3">
+                {{ej-checkbox id="enableanimation" e-checked=true e-change=model.animationChange}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Animation Type</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="animation" e-width="110px" e-targetID="animationtype" e-selectedIndex=0 e-change=model.animationTypeChange
+                }}
+                <div id="animationtype">
+                    <ul>
+                        <li>Rotation</li>
+                        <li>FadeIn</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{outlet}}
