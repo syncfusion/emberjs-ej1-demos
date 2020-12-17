@@ -1,0 +1,35 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            
+            <div style="width:96% !important;position: relative;">
+                <div id="scrollcontent" style="position: relative; left: 36px;">
+                    {{ej-rangenavigator id="rangeNavigator"
+                    e-enableDeferredUpdate=model.enableDeferredUpdateRange
+                    e-padding=model.paddingRange
+                    e-allowSnapping=model.allowSnappingRange
+                    e-selectedRangeSettings=model.selectedRangeSettingsRange
+                    e-isResponsive=model.isResponsiveRange
+                    e-tooltipSettings=model.tooltipSettingsRange
+                    e-series=model.seriesRange
+                    e-seriesSettings=model.seriesSettingsRange
+                    e-rangeChanged=model.rangeChangedRange
+                    }}
+                </div>
+            </div>
+            <div>
+                {{ej-chart id="ChartRange"
+                e-primaryXAxis=model.primaryXAxis
+                e-primaryYAxis=model.primaryYAxis
+                e-crosshair=model.crosshair
+                e-series=model.series
+                e-isResponsive=model.isResponsive
+                e-load=model.load
+                e-size=model.size
+                e-legend=model.legend
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}

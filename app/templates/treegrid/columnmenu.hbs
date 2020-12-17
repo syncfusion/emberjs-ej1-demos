@@ -1,0 +1,22 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+                {{ej-treegrid id="TreeGridColumnMenu" 
+                e-dataSource=model.dataSource 
+                e-childMapping="subtasks"
+                e-treeColumnIndex= 1
+                e-isResponsive=true
+                e-editSettings=model.editSettings
+                e-columns=model.columns
+                e-toolbarSettings=model.toolbarSettings
+                e-showColumnChooser="true"
+                e-showColumnOptions="true"                
+                e-allowSorting="true"
+                e-allowMultiSorting="true"
+                e-columnDialogFields=model.columnDialogFields
+                
+                }}
+        </div>
+    </div>
+</div>
+{{outlet}}

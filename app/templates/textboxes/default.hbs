@@ -1,0 +1,55 @@
+ <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="control">
+                         <table class="editors">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>Kilometers</span>
+                                    </td></tr> <tr>
+                                    <td>
+                                        {{ej-numerictextbox id="numeric" e-value=model.numeric}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Service Tax</span>
+                                    </td></tr> <tr>
+                                    <td>
+                                        {{ej-percentagetextbox id="percent" e-value=model.percent}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Fare</span>
+                                    </td></tr> <tr>
+                                    <td>
+                                       {{ej-currencytextbox id="currency" e-value=model.currency}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Mobile No</span>
+                                    </td></tr> <tr>
+                                    <td>
+                                        {{ej-maskedit id="mask" e-maskFormat = model.mask}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>         
+             </div>
+         </div>
+     </div>
+  </div>
+</div>
+<style>
+table.editors{
+    margin-left: 35%;
+}
+td {
+    padding: 5px;
+}
+</style>
+{{outlet}}
