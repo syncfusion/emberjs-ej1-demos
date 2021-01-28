@@ -1,0 +1,74 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-pivotgauge">
+                {{ej-pivotgauge id="PivotGauge" e-dataSource=model.dataSource e-isResponsive=model.isResponsive e-enableTooltip=model.enableTooltip e-backgroundColor=model.backgroundColor e-labelFormatSettings=model.labelFormatSettings e-scales=model.scales }}
+            </div>
+			<div id="property-window" class="box wide">
+                <div class="row">
+                    <div class="col-md-3">
+                        Show Tooltip
+                    </div>
+                    <div class="col-md-3 aligntop">
+						{{ ej-checkbox id="check1" e-checked=model.checked e-change=model.onchange }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Show Header Labels
+                    </div>
+                    <div class="col-md-3 aligntop">
+						{{ ej-checkbox id="check2" e-checked=model.checked e-change=model.onchange }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Frame Type
+                    </div>
+                    <div class="col-md-3" style="margin-top: 8px;">
+						{{ej-dropdownlist id="frameType" e-width= model.width e-height= model.height e-value=model.frameindex e-change=model.onchange e-dataSource=model.framedata}}
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Row Count
+                        </div>
+                        <div class="col-md-3" style="margin-top: 4px;">
+							{{ej-dropdownlist id="rowscount" e-width= model.width e-height= model.height e-value=model.rowindex e-change=model.onchange1 e-dataSource=model.countdata }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Column Count
+                        </div>
+                        <div class="col-md-3 aligntop">
+							{{ej-dropdownlist id="columnscount" e-width= model.width e-height= model.height e-value=model.colindex e-change=model.onchange1 e-dataSource=model.countdata}}
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<style>
+#PivotGauge{
+	height: 338px; 
+	width: 100%; 
+	overflow: auto; 
+	float: left;
+    position: relative"
+}
+.e-container-pivotgauge{
+	height: 330px;
+}
+.circulardarkgradient, .circularlightgradient {
+    width: 360px;
+    position: relative;
+}
+#rowscount,#columnscount{
+	line-height: 20px !important;
+}
+.row{
+	margin:10px !important;
+}
+</style>
+{{outlet}}

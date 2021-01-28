@@ -1,0 +1,80 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-schedule">
+                {{ej-schedule id="schedule" e-width="100%" e-height="525px" e-currentDate=model.currentDate e-timeScale=model.timeScale e-appointmentSettings=model.appointmentSettings
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-body">
+    <div id="property-window" class="box wide">
+        <div class="row">
+            <div class="col-md-3">Orientation</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="orientation" e-width="110px" e-targetID="orientationtype" e-selectedIndex=0 e-change=model.onActiveChange
+                }}
+                <div id="orientationtype">
+                    <ul>
+                        <li>Vertical</li>
+                        <li>Horizontal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Disable TimeScale</div>
+            <div class="col-md-3">
+                {{ej-checkbox id="disabletimescale" e-checked=false e-change=model.timescaleChange}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">MajorSlot</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="majorslot" e-targetID="majorslotvalue" e-width="110px" e-selectedItemIndex=0}}
+                <div id="majorslotvalue">
+                    <ul>
+                        <li>60</li>
+                        <li>30</li>
+                        <li>20</li>
+                        <li>12</li>
+                        <li>10</li>
+                        <li>120</li>
+                        <li>180</li>
+                        <li>240</li>
+                        <li>5</li>
+                        <li>6</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">MinorSlot</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="minorslot" e-targetID="minorslotvalue" e-width="110px" e-selectedItemIndex=4}}
+                <div id="minorslotvalue">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                {{ej-button id="btnSubmit" e-text="Submit" e-size="medium" e-click=model.changeTimeScale}}
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}

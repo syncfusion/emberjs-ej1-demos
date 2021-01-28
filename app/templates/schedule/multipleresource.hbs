@@ -1,0 +1,29 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-schedule">
+                {{ej-schedule id="schedule" e-width="100%" e-height="525px" e-currentDate=model.currentDate e-appointmentSettings=model.appointmentSettings
+                e-group=model.group e-resources=model.resources }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-body">
+    <div id="property-window" class="box wide">
+        <div class="row">
+            <div class="col-md-3">Orientation</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="orientation" e-width="110px" e-targetID="orientationtype" e-selectedIndex=0 e-change=model.onActiveChange
+                }}
+                <div id="orientationtype">
+                    <ul>
+                        <li>Vertical</li>
+                        <li>Horizontal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}

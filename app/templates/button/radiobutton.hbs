@@ -1,0 +1,35 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+                <div align="center">
+                     <table width="500px" align="center"> 
+                         <tr> Category </tr><br><br>
+                         <tr>
+                             <td>
+                                 {{ ej-radiobutton id="Radio1" e-size=model.Small e-name="category" e-text="Fresher"}}
+                            </td>
+                             <td>
+                                 {{ ej-radiobutton id="Radio2" e-size=model.Small e-name="category" e-text="Experienced" e-checked=model.checked}}
+                            </td>
+                         </tr>
+                        <br><br>
+                             <tr> Expreience </tr><br><br>
+                         <tr>
+                             <td>
+                                 {{ ej-radiobutton id="Radio3" e-size=model.Medium e-name="exprience" e-text="1+Years" e-checked=model.checked}}
+                            </td>
+                             <td>
+                                 {{ ej-radiobutton id="Radio4" e-size=model.Medium e-name="exprience" e-text="2.5+years"}}
+                            </td>
+                             <td>
+                                 {{ ej-radiobutton id="Radio5" e-size=model.Medium e-name="exprience" e-text="5+Years"}}
+                            </td>
+                         </tr>
+                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}
