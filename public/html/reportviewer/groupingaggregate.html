@@ -1,0 +1,18 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-reportviewer">
+                {{ej-reportviewer id="groupingaggregate_reportViewer_Control" e-reportServiceUrl=model.reportServiceUrl 
+                e-processingMode=model.processingMode 
+                e-reportPath=model.reportPath }}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+	#groupingaggregate_reportViewer_Control{
+		height: 550px;
+		display: block;
+	}
+</style>
+{{outlet}}

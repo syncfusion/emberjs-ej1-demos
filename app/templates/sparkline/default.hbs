@@ -1,0 +1,115 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <table style="width:80%;">
+                <tr>
+                    <td align="center"><i>Mean Working Hours for year</i></td>
+                    <td>
+                        <div style="width:170px;">
+                            {{ej-sparkline id="Sparkline" e-dataSource=model.dataSource
+                            e-tooltip=model.tooltip
+                            e-type=model.type
+                            e-size=model.size
+                            }}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><i>Revenue Status</i></td>
+                    <td>
+                        <div style="height:100px;width:150px">
+                            {{ej-sparkline id="column" e-dataSource=model.dataSourceColumn
+                            e-tooltip=model.tooltip
+                            e-type=model.typeColumn
+                            e-size=model.sizeColumn
+                            e-negativePointColor=model.negativePointColorColumn
+                            e-highPointColor=model.highPointColorColumn
+                            }}
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center"><i>Project Status Tracing</i></td>
+                    <td>
+                        <div style="height:100px;width:150px">
+                            {{ej-sparkline id="area" e-dataSource=model.dataSourceArea
+                            e-tooltip=model.tooltip
+                            e-markerSettings = model.markerSettingsArea
+                            e-type=model.typeArea
+                            e-size=model.sizeColumn
+                            e-highPointColor=model.highPointColor
+                            e-lowPointColor=model.lowPointColor
+                            e-opacity=model.opacityArea
+                            }}
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center"><i>Profit Comparison for each months</i></td>
+                    <td>
+                        <div style="height:100px;width:150px">
+                            {{ej-sparkline id="winloss" e-dataSource=model.dataSourceWinloss
+                            e-type=model.typeWinloss
+                            e-size=model.sizeColumn
+                            }}
+                        </div>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center"><i>Expenditure for a year</i></td>
+
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div style="height:40px;width:40px">
+                                        {{ej-sparkline id="pie1" e-dataSource=model.dataSourcePie1
+                                        e-tooltip=model.tooltip
+                                        e-type=model.typePie
+                                        e-size=model.sizePie
+                                        }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="height:40px;width:40px">
+                                        {{ej-sparkline id="pie2" e-dataSource=model.dataSourcePie2
+                                        e-tooltip=model.tooltip
+                                        e-type=model.typePie
+                                        e-size=model.sizePie
+                                        }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="height:40px;width:40px">
+                                        {{ej-sparkline id="pie3" e-dataSource=model.dataSourcePie3
+                                        e-tooltip=model.tooltip
+                                        e-type=model.typePie
+                                        e-size=model.sizePie
+                                        }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="height:40px;width:40px">
+                                        {{ej-sparkline id="pie4" e-dataSource=model.dataSourcePie4
+                                        e-tooltip=model.tooltip
+                                        e-type=model.typePie
+                                        e-size=model.sizePie
+                                        }}
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+    </div>
+</div>
+{{outlet}}
