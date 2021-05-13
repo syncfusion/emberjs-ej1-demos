@@ -1,0 +1,21 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+             {{ej-sunburstchart id="SunburstChart"
+                e-dataSource=model.dataSource
+                e-valueMemberPath = model.valueMemberPath
+                e-levels = model.levels
+                e-dataLabelSettings=model.dataLabelSettings
+                e-tooltip=model.tooltip
+                e-innerRadius=model.innerRadius
+                e-size=model.size
+                e-title = model.title
+                e-legend=model.legend
+                }}
+        </div>
+    </div>
+</div>
+
+
+
+{{outlet}}

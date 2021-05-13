@@ -1,0 +1,39 @@
+ <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">                
+                <div>
+                    {{ej-grid id="Grid" 
+                    e-dataSource=model.dataSource
+                    e-columns=model.columns
+                    e-allowSelection=model.allowSelection
+                    e-allowScrolling=model.allowScrolling
+                    e-scrollSettings=model.scrollSettings
+                    e-enableRowHover=model.enableRowHover
+                    e-create=model.create
+                    e-actionComplete=model.actionComplete
+                    }}
+                </div>
+                <script type="text/x-handlebars" id="columnTemplate1">
+                    <span>
+                         {{ej-sparkline id="spkline{{:EmployeeID}}" }}
+                    </span>
+                </script>
+                <script type="text/x-handlebars" id="columnTemplate3">
+                    <span>
+                         {{ej-sparkline id="spkarea{{:EmployeeID}}" }}
+                    </span>
+                </script>
+                <script type="text/x-handlebars" id="columnTemplate4">
+                   <span>
+                         {{ej-sparkline id="spkwl{{:EmployeeID}}" }}
+                    </span>
+                </script>
+            </div>
+        </div>
+    </div>
+    <style type="text/css" class="cssStyles">
+        .rowcell {
+            font-size: 15px !important;
+        }
+    </style>
+{{outlet}}
