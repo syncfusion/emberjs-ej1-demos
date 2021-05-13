@@ -1,0 +1,17 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+				<div align="center">
+					{{ej-barcode id="barcode"e-symbologyType="datamatrix" e-text=model.Text e-xDimension=model.xDimension }}
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    td{
+        padding: 5px;
+    }
+</style>
+{{outlet}}
