@@ -1,0 +1,17 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-listbox">
+			 <div class="ctrllabel">Select a Customer</div>
+               {{ej-listbox id="defaultlistbox" e-dataSource=model.dataSource e-fields=model.fields e-query=model.query e-height=model.height e-width=model.width}}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.ctrllabel {
+            font-weight: 600;
+            padding-bottom: 12px;
+        }
+		</style>
+{{outlet}}
