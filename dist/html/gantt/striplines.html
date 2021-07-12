@@ -1,0 +1,27 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+                {{ej-gantt id="GanttStripLines" 
+                e-dataSource=model.dataSource 
+                e-childMapping="subtasks"
+                e-treeColumnIndex= 1
+                e-isResponsive=true
+                e-taskIdMapping="taskID"
+				e-durationMapping="duration"
+                e-taskNameMapping="taskName"
+                e-scheduleStartDate=model.e-scheduleStartDate
+                e-scheduleEndDate=model.e-scheduleEndDate           
+                e-startDateMapping="startDate"
+                e-endDateMapping="endDate"
+                e-progressMapping="progress"
+                e-highlightWeekEnds=true              
+                e-includeWeekend=false
+                e-predecessorMapping="predecessor"
+                e-showResourceNames=true
+                e-allowGanttChartEditing=false
+                e-stripLines=model.stripLines
+                }}
+        </div>
+    </div>
+</div>
+{{outlet}}
