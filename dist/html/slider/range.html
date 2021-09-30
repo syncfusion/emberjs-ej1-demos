@@ -1,0 +1,17 @@
+<div class="content-container-fluid">
+	 <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="txt">Range</div>
+                    <br />
+                    {{ej-slider id="range" e-values=model.slidervalues e-sliderType="range" e-width=model.width }}
+                    <br />
+                    <br />
+                    <div class="txt">Min-Range</div>
+                    <br />
+                    {{ej-slider id="minrange" e-value=model.value e-sliderType="minrange" e-width=model.width }}
+                </div>
+            </div>
+        </div>
+</div>
+{{outlet}}

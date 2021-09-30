@@ -1,0 +1,14 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+                {{ej-treegrid id="TreeGridDefault" 
+                e-dataSource=model.dataSource 
+                e-childMapping="subtasks"
+                e-treeColumnIndex= 1
+                e-isResponsive=true                
+                e-columns=model.columns            
+                }}
+        </div>
+    </div>
+</div>
+{{outlet}}
