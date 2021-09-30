@@ -1,0 +1,31 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area" style="width:100%;">
+            
+
+                {{#ej-splitter id="outterSplitter" e-height=model.height e-width=model.width e-orientation=model.orientation e-properties=model.properties}}  
+                
+                {{#ej-splitter id="innerSplitter" e-create=model.create  e-isResponsive=true}}
+                         <div>
+                            <div class="cont">Pane 1 </div>
+                        </div>
+                        <div>
+                            <div class="cont">Pane 2 </div>
+                        </div>
+                {{/ej-splitter}} 
+                    <div>
+                        <div class="cont">Pane 3 </div>
+                    </div>
+                {{/ej-splitter}}
+               
+            
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+        .cont {
+            padding: 10px 0 0 10px;
+            text-align: center;
+        }
+    </style>
+{{outlet}}
