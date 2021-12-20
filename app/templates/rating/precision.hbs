@@ -1,0 +1,23 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+					<table align="center">
+						<tr>
+							<td valign="top">Full Precision :</td>
+							<td>{{ej-rating id="fullRating" e-value=model.fullrate type="text" class="rating"}}</td>
+						</tr>
+						<tr>
+							<td valign="top">Half Precision :</td>
+							<td>{{ej-rating id="halfRating" e-precision=model.half e-value=model.halfrate type="text" class="rating"}}</td>
+						</tr>
+						<tr>
+							<td valign="top">Exact Precision :</td>
+							<td>{{ej-rating id="exactRating" e-precision=model.exact e-value=modek.exactrate type="text" class="rating"}}</td>
+						</tr>
+					</table>
+			 </div>
+		</div>
+	</div>
+</div>
+{{outlet}}
