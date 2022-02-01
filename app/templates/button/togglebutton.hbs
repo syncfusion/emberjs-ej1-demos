@@ -1,0 +1,38 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+                <div align="center">
+                     <table width="500px" align="center"> 
+                         <tr>
+                             <td> Normal </td>
+                             <td>{{ ej-togglebutton type="checkbox" id="Button1" e-size=model.Normal e-contentType="imageonly" e-showRoundedCorner=model.roundedCorner e-defaultPrefixIcon="e-icon e-mediaplay e-uiLight" e-activePrefixIcon="e-icon e-mediapause e-uiLight"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Mini </td>
+                             <td>{{ ej-togglebutton type="checkbox" id="Button2" e-size=model.Mini e-showRoundedCorner=model.roundedCorner e-defaultText="Play" e-activeText="Pause"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Small </td>
+                             <td>{{ ej-togglebutton type="checkbox" id="Button3" e-size=model.Small e-showRoundedCorner=model.roundedCorner e-defaultText="Play" e-activeText="Pause"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Medium </td>
+                             <td>{{ ej-togglebutton type="checkbox" id="Button4" e-size=model.Medium e-showRoundedCorner=model.roundedCorner e-defaultText="Play" e-activeText="Pause"}}</td>
+                         </tr>
+                         <tr>
+                             <td> Large </td>
+                             <td>{{ ej-togglebutton type="checkbox" id="Button5" e-contentType="textandimage" e-size=model.Large e-showRoundedCorner=model.roundedCorner e-defaultText="Play" e-activeText="Pause" e-defaultPrefixIcon="e-icon e-mediaplay e-uiLight" e-activePrefixIcon="e-icon e-mediapause e-uiLight"}}</td>
+                         </tr>
+                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    td{
+        padding: 5px;
+    }
+</style>
+{{outlet}}
