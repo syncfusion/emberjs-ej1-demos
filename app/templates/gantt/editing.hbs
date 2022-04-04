@@ -1,0 +1,24 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+                {{ej-gantt id="GanttEditing" 
+                e-dataSource=model.dataSource 
+                e-childMapping="subtasks"
+                e-treeColumnIndex= 1
+                e-isResponsive=true
+                e-taskIdMapping="taskID"
+                e-taskNameMapping="taskName"
+                e-scheduleStartDate=model.e-scheduleStartDate
+                e-scheduleEndDate=model.e-scheduleEndDate
+                e-editSettings=model.editSettings                
+                e-toolbarSettings=model.toolbarSettings
+                e-startDateMapping="startDate"
+                e-endDateMapping="endDate"
+                e-progressMapping="progress"
+                e-predecessorMapping="predecessor"
+                e-notesMapping="notesContent"                
+                }}
+        </div>
+    </div>
+</div>
+{{outlet}}

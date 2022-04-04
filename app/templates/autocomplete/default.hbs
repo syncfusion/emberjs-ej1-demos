@@ -1,0 +1,55 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+                {{ej-autocomplete id="autocomplete" e-dataSource=model.dataSource e-width=model.width e-watermarkText=model.watermarkText
+                e-enableAutoFill=model.enableAutoFill}}
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Alt + j
+                        </div>
+                        <div class="col-md-3">
+                            Focuses the control
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Up
+                        </div>
+                        <div class="col-md-3">
+                            Moves to previous item
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Down
+                        </div>
+                        <div class="col-md-3">
+                            Moves to next item
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Enter
+                        </div>
+                        <div class="col-md-3">
+                            Selects the focused item
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Esc
+                        </div>
+                        <div class="col-md-3">
+                            Closes the popup
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}
