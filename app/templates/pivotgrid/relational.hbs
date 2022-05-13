@@ -1,0 +1,24 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-pivotgrid">
+                {{ej-pivotgrid id="PivotGrid" e-dataSource=model.dataSource e-enableGroupingBar=model.enableGroupingBar e-pivotTableFieldListID=model.pivotTableFieldListID}}
+				{{ej-pivotschemadesigner id="PivotSchemaDesigner"}}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+		#PivotGrid {
+            width: 50% !important;
+			height: 670px;
+			overflow: scroll;
+			float: left;
+        }
+        #PivotSchemaDesigner {
+            height:650px;
+			width:40% !important;
+        }
+
+ </style>
+{{outlet}}
