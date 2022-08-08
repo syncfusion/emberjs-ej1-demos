@@ -1,0 +1,79 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+                <div align="center">
+                     <table width="500px" align="center"> 
+                         <tr>
+                             <td> Normal </td>
+                             <td>
+                                 <div class="spltspan">
+                                     {{ ej-splitbutton id="Button1" e-size=model.Normal e-target="#target1" e-contentType="imageonly" e-showRoundedCorner=model.roundedCorner e-prefixIcon="e-icon e-login"}}</div></td>
+                             <ul id="target1">
+                                        <li><span>User</span></li>
+                                        <li><span>Guest</span></li>
+                                        <li><span>Admin</span></li>
+                             </ul>
+                         </tr>
+                         <tr>
+                             <td> Mini </td>
+                             <td>{{ ej-splitbutton id="Button2" e-size=model.Mini e-target="#target2" e-showRoundedCorner=model.roundedCorner e-text="login"}}</td>
+                             <ul id="target2">
+                                        <li><span>User</span></li>
+                                        <li><span>Guest</span></li>
+                                        <li><span>Admin</span></li>
+                             </ul>
+                         </tr>
+                         <tr>
+                             <td> Small </td>
+                             <td>{{ ej-splitbutton id="Button3" e-size=model.Small e-target="#target3" e-showRoundedCorner=model.roundedCorner e-text="login"}}</td>
+                             <ul id="target3">
+                                        <li><span>User</span></li>
+                                        <li><span>Guest</span></li>
+                                        <li><span>Admin</span></li>
+                             </ul>
+                         </tr>
+                         <tr>
+                             <td> Medium </td>
+                             <td>{{ ej-splitbutton id="Button4" e-size=model.Medium e-target="#target4" e-showRoundedCorner=model.roundedCorner e-text="login"}}</td>
+                             <ul id="target4">
+                                        <li><span>User</span></li>
+                                        <li><span>Guest</span></li>
+                                        <li><span>Admin</span></li>
+                             </ul>
+                         </tr>
+                         <tr>
+                             <td> Large </td>
+                             <td>{{ ej-splitbutton id="Button5" e-contentType="textandimage" e-size=model.Large e-target="#target5" e-showRoundedCorner=model.roundedCorner e-text="login" e-prefixIcon="e-icon e-login"}}</td>
+                             <ul id="target5">
+                                        <li><span>User</span></li>
+                                        <li><span>Guest</span></li>
+                                        <li><span>Admin</span></li>
+                             </ul>
+                         </tr>
+                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-body">
+    <div id="property-window" class="box wide">
+        <div class="row">
+            <div class="col-md-3">Button Mode</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="ButtonMode" e-dataSource=model.buttonModes e-selectedIndex=0 e-change=model.onChange}}
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    td{
+        padding: 5px;
+    }
+    .spltspan {
+            width: 50px;
+        }
+</style>
+{{outlet}}

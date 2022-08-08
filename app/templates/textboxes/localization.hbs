@@ -1,0 +1,63 @@
+<script src="../../../scripts/i18n/ej.culture.ar-AE.min.js"></script>
+<script src="../../../scripts/i18n/ej.culture.fr-FR.min.js"></script>
+<script src="../../../scripts/i18n/ej.culture.vi-VN.min.js"></script>
+<script src="../../../scripts/i18n/ej.culture.es-ES.min.js"></script>
+ 
+ <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="control">
+                         <table class="editors">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>Numeric Textbox</span>
+                                    </td></tr> <tr>
+                                    <td>
+                                        {{ej-numerictextbox id="numericLocale" e-value=model.numeric}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Percentage Textbox</span>
+                                    </td></tr> <tr>
+                                    <td>
+                                        {{ej-percentagetextbox id="percentLocale" e-value=model.percent}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Currency Textbox</span>
+                                    </td></tr> <tr>
+                                    <td>
+                                       {{ej-currencytextbox id="currencyLocale" e-value=model.currency}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>         
+             </div>
+         </div>
+     </div>
+  </div>
+<div class="panel-body">
+    <div id="property-window" class="box wide">
+        <div class="row">
+            <div class="col-md-3">Select Locale</div>
+            <div class="col-md-3">
+                {{ej-dropdownlist id="localeValue" e-width="110px" e-dataSource=model.locale e-selectedIndex=0 e-change=model.onActiveChange
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<style>
+table.editors{
+    margin-left: 35%;
+}
+td {
+    padding: 5px;
+}
+</style>
+{{outlet}}

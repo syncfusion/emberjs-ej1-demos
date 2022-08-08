@@ -1,0 +1,29 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="e-container-spellcheck">
+                {{#ej-spellcheck id="TextArea" contenteditable="true" e-create=model.create e-dictionarySettings=model.dictionarySettings
+                e-contextMenuSettings=model.contextMenuSettings }} Facebook is a social networking service headquartered
+                in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard
+                College roommates and fellow students Eduardo, Andrew McCollum, Dustin and Chris Hughes. The fouders had
+                initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston
+                area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities
+                and later to high-school students. {{/ej-spellcheck}}
+            </div>
+            <div>
+                {{ej-button id="SpellCheck" e-text="Spell check using dialog" e-click=model.click }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    #TextArea {
+        padding-bottom: 15px;
+    }
+
+    .fixedlayout.office-365 #SpellCheck {
+        width: 193px !important;
+    }
+</style>
+{{outlet}}
