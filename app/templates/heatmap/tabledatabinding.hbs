@@ -1,0 +1,40 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+             <div style="border-width: 2px; opacity: 0.7; width: 290px; text-align: center;">
+                    <label style="color: Black; font-size: 22px; height: 25px; font-weight: Normal;">Product Sales by Year</label><br />
+                    <label style="color: Black; font-size: 22px; margin-top: -2px; height: 25px; font-weight: Normal;">(In Percentage)</label>
+                </div>
+                <br />
+                <div style="width: 100%; margin: 0 auto; text-align: center;">
+                     {{ ej-heatmap id="HeatMap"  e-width = "100%" e-itemsMapping = model.itemsMapping e-isResponsive = "true"
+                e-colorMappingCollection = model.colorMappingCollection e-itemsSource = model.itemSource e-legendCollection = model.legendCollection }}
+                    <div style="height: 15px; width: 100%;"></div>
+                    {{ ej-heatmaplegend id="HeatMap_Legend"  e-width = "75%" e-height = "50px" e-isResponsive = "true"
+                e-colorMappingCollection = model.colorMappingCollection }}
+                </div>
+        </div>
+    </div>
+</div>
+ <style>
+    #HeatMap {
+        margin-top: 1px;
+    }
+    
+    #HeatMap_Legend {
+        margin-left: 150px;
+    }
+
+    .row .cols-sample-area {
+        min-height: 250px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1920px) {
+
+        .row .cols-sample-area {
+            width: 100%;
+            *width: 72.956%;
+        }
+    }
+</style>
+    {{outlet}}
