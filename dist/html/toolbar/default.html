@@ -1,0 +1,59 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame" align="center">
+               {{ej-toolbar id="defaulttoolbar" e-dataSource=model.list e-fields=model.fields e-width=model.width}}
+			   
+            </div>
+		</div>
+	</div>
+</div>
+<style type="text/css" class="cssStyles">
+    /*controls*/
+    .darktheme .cols-sample-area .e-tooltxt .mailtools {
+        background-image: url('content/images/toolbar/maild.png');
+    }
+
+    .cols-sample-area .e-tooltxt .mailtools {
+        display: block;
+        background-image: url('content/images/toolbar/maill.png');
+        height: 24px;
+        width: 24px;
+        background-repeat: no-repeat;
+    }
+
+    .e-tooltxt:hover .mailtools, .darktheme .cols-sample-area .e-tooltxt:hover .mailtools {
+        background-image: url('content/images/toolbar/mailh.png');
+    }
+
+    .mailtools.done {
+        background-position: -11px -140px;
+    }
+
+    .mailtools.movetofolder {
+        background-position: -12px -40px;
+    }
+
+    .mailtools.categorize {
+        background-position: -14px -248px;
+    }
+
+    .mailtools.flag {
+        background-position: -13px -282px;
+    }
+
+    .mailtools.forward {
+        background-position: -14px -314px;
+    }
+
+    .mailtools.newmail {
+        background-position: -14px -348px;
+    }
+
+    .mailtools.reply {
+        background-position: -14px -388px;
+    }
+</style>
+
+
+{{outlet}}
