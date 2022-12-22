@@ -1,0 +1,21 @@
+<div class="content-container-fluid">
+    <div class="row">
+        <div class="cols-sample-area">
+                {{ej-gantt id="GanttDefault" 
+                e-dataSource=model.dataSource 
+                e-childMapping="Children"
+                e-treeColumnIndex= 1
+                e-isResponsive=true
+                e-taskIdMapping="TaskID"
+                e-taskNameMapping="TaskName"
+                e-scheduleStartDate=model.e-scheduleStartDate
+                e-scheduleEndDate=model.e-scheduleEndDate           
+                e-startDateMapping="StartDate"
+                e-endDateMapping="EndDate"
+                e-progressMapping="Progress"
+                e-allowGanttChartEditing=false
+                }}
+        </div>
+    </div>
+</div>
+{{outlet}}
